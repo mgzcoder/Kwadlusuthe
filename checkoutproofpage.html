@@ -1,0 +1,435 @@
+<html>
+<head>
+<title>Checkout page</title> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+function Response() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<style>
+.body {
+  margin: 0;
+  padding: 0;
+  background-image: url('back.png');
+  background-repeat: repeat-y;
+   background-size: 100% ;
+		}
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: watering;
+  
+ text-align:center; 
+ 
+}
+
+.topnav a {
+  float: left;
+   display: block;
+  color: #F5F5DC;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 10px;
+}
+
+.topnav ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+    margin-top: 12px;
+	margin-bottom: 20px;
+line-height: 10px;	
+		}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+   background-color:  #FF6600 ;
+  opacity: 0.9;
+  border-radius:5px;
+  color: black;
+  line-height: 10px;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+	 height="100px"
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+	 height="100px"
+  }
+}
+
+
+.column{
+	float:left;
+	width:50%;
+	
+	padding:10px;
+	height:180px;
+	}
+.row:after {
+	content:"";
+	display:table;
+	clear:both;
+	}
+#cartTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 90%;
+  margin:2%;
+}
+
+#cartTable td, #cartTable th {
+  border: 0px solid ;
+   padding-top: 10px;
+  padding: 2px;
+  text-align: center;
+}
+
+#cartTable th {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+  background-color: #FF6600;
+  color: #F5F5DC;
+}
+
+
+div.scroll { 
+                
+				
+	width: 100%; 
+	height: 700px; 
+	overflow-x: hidden; 
+	overflow-y: auto; 
+                
+	} 
+	
+	.btn {
+  background-color: #FF6600;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:20px;
+}
+</style>
+</head>
+<body class="body" style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;">
+<br>
+<div class="topnav" id="myTopnav">
+<span align="left"  height="100px" ><a href="home.html" height="100px"> &nbsp &nbsp <img  src="Icons\logo.png" width="100" height="60" > </a></span>
+
+	<ul>
+	<b></b>
+  <a  href="home.html" >Home</a>
+       
+	   
+  </ul>
+  <a href="javascript:void(0);" class="icon" onclick="Response()">
+    <i class="fa fa-bars"></i>
+  </a>
+  
+</div>
+<br><br>
+<br>
+
+<br>
+<center>
+ <div align="center"  style=" margin:2%;font-size:20;font-weight:bold;border-radius:20px;background-color:#F5F5DC;width:90%;position:relative;left:1%;">
+ <br>
+ <h1 align="center" style="font-weight:bold;color:#000000"> Thank you for your order<h1>
+ 
+ <h2 align="left"> &nbsp &nbsp &nbsp Order Details </H2>
+ <h4 align="left"> &nbsp &nbsp &nbsp Order ID: &nbsp <span id="OrderID"></span> </h4>
+ <h4 align="left">&nbsp &nbsp &nbsp Order Date: &nbsp <span id="DATE"></span> </h4>
+ <h4 align="left">&nbsp &nbsp &nbsp Order Time: &nbsp <span id="TIME"></span> </h4>
+ <div width="80%">
+ <table id="cartTable">
+  <tr>
+    <th>PRODUCT NAME</th>
+    <th>PRICE</th>
+    <th>QUANTITY</th>
+	<th>TOTAL</th>
+  </tr>
+      <tr>
+	  <td><b id="FoodName"></b></td>  <td> <b id="foodprice"></b> </td><td><b id="NumItem"></b></td><td> <b id="TotalPrice"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName1"></b></td>  <td> <b id="foodprice1"></b></td> <td><b id="NumItem1"></b></td><td> <b id="TotalPrice1"></b> </td></p>
+      </tr>
+	   <tr>
+	  <td><b  id="FoodName2"></b></td>  <td> <b id="foodprice2"></b></td><td><b id="NumItem2"></b></td> <td> <b id="TotalPrice2"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName3"></b></td>  <td> <b id="foodprice3"></b></td><td><b id="NumItem3"></b></td> <td> <b id="TotalPrice3"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName4"></b></td> <td> <b id="foodprice4"></b></td><td><b id="NumItem4"></b></td>  <td> <b id="TotalPrice4"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName5"></b></td>  <td> <b id="foodprice5"></b></td> <td><b id="NumItem5"></b></td><td> <b id="TotalPrice5"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b id="FoodName6"></b></td>  <td> <b id="foodprice6"></b></td> <td><b id="NumItem6"></b></td><td> <b id="TotalPrice6"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b id="FoodName7"></b></td>  <td> <b id="foodprice7"></b></td><td><b id="NumItem7"></b></td> <td> <b id="TotalPrice7"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName8"></b></td> <td> <b id="foodprice8"></b></td> <td><b id="NumItem8"></b></td> <td> <b id="TotalPrice8"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName9"></b></td>  <td> <b id="foodprice9"></b></td><td><b id="NumItem9"></b></td> <td> <b id="TotalPrice9"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName10"></b></td> <td> <b id="foodprice10"></b></td>  <td><b id="NumItem10"></b></td><td> <b id="TotalPrice10"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName11"></b></td> <td> <b id="foodprice11"></b></td> <td><b id="NumItem11"></b></td> <td> <b id="TotalPrice11"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName12"></b></td>  <td> <b id="foodprice12"></b></td><td><b id="NumItem12"></b></td> <td> <b id="TotalPrice12"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName13"></b></td>  <td> <b id="foodprice13"></b></td> <td><b id="NumItem13"></b></td><td> <b id="TotalPrice13"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b id="FoodName14"></b></td>  <td> <b id="foodprice14"></b></td> <td><b id="NumItem14"></b></td><td> <b id="TotalPrice14"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName15"></b></td>  <td> <b id="foodprice15"></b></td> <td><b id="NumItem15"></b></td><td> <b id="TotalPrice15"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName16"></b></td>  <td> <b id="foodprice16"></b></td> <td><b id="NumItem16"></b></td><td> <b id="TotalPrice16"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName17"></b></td>  <td> <b id="foodprice17"></b></td><td><b id="NumItem17"></b></td> <td> <b id="TotalPrice17"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b  id="FoodName18"></b></td>  <td> <b id="foodprice18"></b></td> <td><b id="NumItem18"></b></td><td> <b id="TotalPrice18"></b> </td></p>
+      </tr>
+	   <tr>
+	  <td><b  id="FoodName19"></b></td>  <td> <b id="foodprice19"></b></td><td><b id="NumItem19"></b></td> <td> <b id="TotalPrice19"></b> </td></p>
+      </tr>
+	   <tr>
+	  <td><b  id="FoodName20"></b></td> <td> <b id="foodprice20"></b></td>  <td><b id="NumItem20"></b></td><td> <b id="TotalPrice20"></b> </td></p>
+      </tr>
+	   <tr>
+	  <td><b id="FoodName21"></b></td> <td> <b id="foodprice21"></b></td> <td><b id="NumItem21"></b></td> <td> <b id="TotalPrice21"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><b id="FoodName22"></b></td>  <td> <b id="foodprice22"></b></td><td><b id="NumItem22"></b></td> <td> <b id="TotalPrice22"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td colspan="4"></td>
+	  </tr>
+	  <tr>
+	  <td colspan="4"></td>
+	  </tr>
+	 <tr align="right">
+	  <th colspan="2"><b>TOTALS</b></th><td style="background-color: #FF4500;color: #F5F5DC;"><b id="TotalCartQuantity"></b></td><td style="background-color: #FF4500;color: #F5F5DC;"><b id="TotalCartCost"> </b></td>
+	  </tr>
+	  </table>
+	  
+	  <br><br>
+	  
+	 <a href="home.html">
+	  <button class="btn"><i class="fa fa-close"></i> Close</button>
+	  </a>
+	  <br>
+	  <script>
+	  
+ document.getElementById("OrderID").innerHTML=localStorage.getItem("OrderID");
+ document.getElementById("DATE").innerHTML=localStorage.getItem("DATE");
+ document.getElementById("TIME").innerHTML=localStorage.getItem("TIME");
+
+ document.getElementById("FoodName").innerHTML=localStorage.getItem("FoodName");
+ document.getElementById("foodprice").innerHTML=localStorage.getItem("foodprice");
+ document.getElementById("NumItem").innerHTML=localStorage.getItem("NumItem");
+ document.getElementById("TotalPrice").innerHTML=localStorage.getItem("TotalPrice");
+ 
+ document.getElementById("FoodName1").innerHTML=localStorage.getItem("FoodName1");
+ document.getElementById("foodprice1").innerHTML=localStorage.getItem("foodprice1");
+ document.getElementById("NumItem1").innerHTML=localStorage.getItem("NumItem1");
+ document.getElementById("TotalPrice1").innerHTML=localStorage.getItem("TotalPrice1");
+ 
+ document.getElementById("FoodName2").innerHTML=localStorage.getItem("FoodName2");
+ document.getElementById("foodprice2").innerHTML=localStorage.getItem("foodprice2");
+ document.getElementById("NumItem2").innerHTML=localStorage.getItem("NumItem2");
+ document.getElementById("TotalPrice2").innerHTML=localStorage.getItem("TotalPrice2"); 
+ 
+  document.getElementById("FoodName3").innerHTML=localStorage.getItem("FoodName3");
+ document.getElementById("foodprice3").innerHTML=localStorage.getItem("foodprice3");
+ document.getElementById("NumItem3").innerHTML=localStorage.getItem("NumItem3");
+ document.getElementById("TotalPrice3").innerHTML=localStorage.getItem("TotalPrice3");
+ 
+  document.getElementById("FoodName4").innerHTML=localStorage.getItem("FoodName4");
+ document.getElementById("foodprice4").innerHTML=localStorage.getItem("foodprice4");
+ document.getElementById("NumItem4").innerHTML=localStorage.getItem("NumItem4");
+ document.getElementById("TotalPrice4").innerHTML=localStorage.getItem("TotalPrice4"); 
+ 
+  document.getElementById("FoodName5").innerHTML=localStorage.getItem("FoodName5");
+ document.getElementById("foodprice5").innerHTML=localStorage.getItem("foodprice5");
+ document.getElementById("NumItem5").innerHTML=localStorage.getItem("NumItem5");
+ document.getElementById("TotalPrice5").innerHTML=localStorage.getItem("TotalPrice5"); 
+ 
+  document.getElementById("FoodName6").innerHTML=localStorage.getItem("FoodName6");
+ document.getElementById("foodprice6").innerHTML=localStorage.getItem("foodprice6");
+ document.getElementById("NumItem6").innerHTML=localStorage.getItem("NumItem6");
+ document.getElementById("TotalPrice6").innerHTML=localStorage.getItem("TotalPrice6");
+ 
+ document.getElementById("FoodName7").innerHTML=localStorage.getItem("FoodName7");
+ document.getElementById("foodprice7").innerHTML=localStorage.getItem("foodprice7");
+ document.getElementById("NumItem7").innerHTML=localStorage.getItem("NumItem7");
+ document.getElementById("TotalPrice7").innerHTML=localStorage.getItem("TotalPrice7");
+ 
+ document.getElementById("FoodName8").innerHTML=localStorage.getItem("FoodName8");
+ document.getElementById("foodprice8").innerHTML=localStorage.getItem("foodprice8");
+ document.getElementById("NumItem8").innerHTML=localStorage.getItem("NumItem8");
+ document.getElementById("TotalPrice8").innerHTML=localStorage.getItem("TotalPrice8");
+ 
+ document.getElementById("FoodName9").innerHTML=localStorage.getItem("FoodName9");
+ document.getElementById("foodprice9").innerHTML=localStorage.getItem("foodprice9");
+ document.getElementById("NumItem9").innerHTML=localStorage.getItem("NumItem9");
+ document.getElementById("TotalPrice9").innerHTML=localStorage.getItem("TotalPrice9");
+ 
+ document.getElementById("FoodName10").innerHTML=localStorage.getItem("FoodName10");
+ document.getElementById("foodprice10").innerHTML=localStorage.getItem("foodprice10");
+ document.getElementById("NumItem10").innerHTML=localStorage.getItem("NumItem10");
+ document.getElementById("TotalPrice10").innerHTML=localStorage.getItem("TotalPrice10");
+ 
+ document.getElementById("FoodName11").innerHTML=localStorage.getItem("FoodName11");
+ document.getElementById("foodprice11").innerHTML=localStorage.getItem("foodprice11");
+ document.getElementById("NumItem11").innerHTML=localStorage.getItem("NumItem11");
+ document.getElementById("TotalPrice11").innerHTML=localStorage.getItem("TotalPrice11");
+ 
+ document.getElementById("FoodName12").innerHTML=localStorage.getItem("FoodName12");
+ document.getElementById("foodprice12").innerHTML=localStorage.getItem("foodprice12");
+ document.getElementById("NumItem12").innerHTML=localStorage.getItem("NumItem12");
+ document.getElementById("TotalPrice12").innerHTML=localStorage.getItem("TotalPrice12");
+ 
+  document.getElementById("FoodName13").innerHTML=localStorage.getItem("FoodName13");
+ document.getElementById("foodprice13").innerHTML=localStorage.getItem("foodprice13");
+ document.getElementById("NumItem13").innerHTML=localStorage.getItem("NumItem13");
+ document.getElementById("TotalPrice13").innerHTML=localStorage.getItem("TotalPrice13");
+ 
+  document.getElementById("FoodName14").innerHTML=localStorage.getItem("FoodName14");
+ document.getElementById("foodprice14").innerHTML=localStorage.getItem("foodprice14");
+ document.getElementById("NumItem14").innerHTML=localStorage.getItem("NumItem14");
+ document.getElementById("TotalPrice14").innerHTML=localStorage.getItem("TotalPrice14");
+ 
+  document.getElementById("FoodName15").innerHTML=localStorage.getItem("FoodName15");
+ document.getElementById("foodprice15").innerHTML=localStorage.getItem("foodprice15");
+ document.getElementById("NumItem15").innerHTML=localStorage.getItem("NumItem15");
+ document.getElementById("TotalPrice15").innerHTML=localStorage.getItem("TotalPrice15");
+ 
+  document.getElementById("FoodName16").innerHTML=localStorage.getItem("FoodName16");
+ document.getElementById("foodprice16").innerHTML=localStorage.getItem("foodprice16");
+ document.getElementById("NumItem16").innerHTML=localStorage.getItem("NumItem16");
+ document.getElementById("TotalPrice16").innerHTML=localStorage.getItem("TotalPrice16");
+ 
+  document.getElementById("FoodName17").innerHTML=localStorage.getItem("FoodName17");
+ document.getElementById("foodprice17").innerHTML=localStorage.getItem("foodprice17");
+ document.getElementById("NumItem17").innerHTML=localStorage.getItem("NumItem17");
+ document.getElementById("TotalPrice17").innerHTML=localStorage.getItem("TotalPrice17");
+ 
+  document.getElementById("FoodName18").innerHTML=localStorage.getItem("FoodName18");
+ document.getElementById("foodprice18").innerHTML=localStorage.getItem("foodprice18");
+ document.getElementById("NumItem18").innerHTML=localStorage.getItem("NumItem18");
+ document.getElementById("TotalPrice18").innerHTML=localStorage.getItem("TotalPrice18");
+ 
+  document.getElementById("FoodName19").innerHTML=localStorage.getItem("FoodName19");
+ document.getElementById("foodprice19").innerHTML=localStorage.getItem("foodprice19");
+ document.getElementById("NumItem19").innerHTML=localStorage.getItem("NumItem19");
+ document.getElementById("TotalPrice19").innerHTML=localStorage.getItem("TotalPrice19");
+ 
+  document.getElementById("FoodName20").innerHTML=localStorage.getItem("FoodName20");
+ document.getElementById("foodprice20").innerHTML=localStorage.getItem("foodprice20");
+ document.getElementById("NumItem20").innerHTML=localStorage.getItem("NumItem20");
+ document.getElementById("TotalPrice20").innerHTML=localStorage.getItem("TotalPrice20");
+ 
+ document.getElementById("FoodName21").innerHTML=localStorage.getItem("FoodName21");
+ document.getElementById("foodprice21").innerHTML=localStorage.getItem("foodprice21");
+ document.getElementById("NumItem21").innerHTML=localStorage.getItem("NumItem21");
+ document.getElementById("TotalPrice21").innerHTML=localStorage.getItem("TotalPrice21");
+ 
+ document.getElementById("FoodName22").innerHTML=localStorage.getItem("FoodName22");
+ document.getElementById("foodprice22").innerHTML=localStorage.getItem("foodprice22");
+ document.getElementById("NumItem22").innerHTML=localStorage.getItem("NumItem22");
+ document.getElementById("TotalPrice22").innerHTML=localStorage.getItem("TotalPrice22");
+ 
+ document.getElementById("TotalCartCost").innerHTML=localStorage.getItem("TotalCartCost");
+ document.getElementById("TotalCartQuantity").innerHTML=localStorage.getItem("TotalCartQuantity");
+ </script>
+	  <BR>
+	
+	  </div>
+<br><br><br>
+ 
+</div>
+</center>
+<br><br>
+
+<br><br>
+<hr style="width:98%;"></hr>
+<footer align="center" style="background-color:#F5F5DC ;bottom:0px;width:96%;position:relative;left:2%; border-radius:5px;">
+
+
+<div  class="column" style="font-color:black;background-color:#F5F5DC;border-radius:5px;"> 
+<br> 
+<h3 style="font-size:18;color: #000000">CONTACT US</h3>
+<P style="color: #000000">kwadlusuthe@gmail.com<br>
+031 555 0000</p>
+</div>
+
+<div  class="column" style="font-color:white;background-color:#F5F5DC;border-radius:5px;"> 
+<br>
+<h3 style="font-size:18;color: #000000">ADDRESS</h3>
+<P style="color: #000000">Steve Biko Rd<br> Musgrave<br> Berea<br> 4001</P>
+</div>
+
+</footer>
+</body>
+</html>

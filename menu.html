@@ -1,0 +1,1061 @@
+<html>
+<head>
+<title>menu</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script language="javascript" src="MenuScript.js">
+
+
+
+</script>
+<style>
+
+.body {
+  margin: 0.3%;
+  padding: 0.3%;
+  background-image: url('back.png');
+  background-repeat: repeat-y;
+   background-repeat: repeat-y;
+   background-size: 100% ;
+}
+
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: watering;
+ text-align:center;
+
+}
+
+.topnav a {
+  float: left;
+   display: block;
+  color: #F5F5DC;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 10px;
+}
+
+.topnav ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+    margin-top: 12px;
+	margin-bottom: 20px;
+line-height: 10px;
+		}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+   background-color:  #FF6600 ;
+  opacity: 0.9;
+  border-radius:5px;
+  color: black;
+  line-height: 10px;
+}
+
+.topnav .icon {
+  display: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+  margin:0.0001%;
+
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  align="center"
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+   .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+	 height="100px"
+}
+
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+	 height="100px"
+  }
+  .column {
+    width: 90%;
+  }
+  #cartTable {
+
+  width: 90%;
+}
+
+}
+
+
+}
+.auto-style2 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.form-popup {
+
+
+   display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 5%;
+  display:none;
+  width:90%;
+  text-align: center;
+  overflow: auto;
+  background-color: #FAFAD2 ;
+
+
+}
+
+.form-container {
+align:center;
+  padding: 5px;
+
+}
+.form-container {
+align:center;
+  padding: 5px;
+
+}
+
+input[type="checkbox"][id^="cb"] {
+  display: none;
+}
+
+label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+   border-radius: 600px;
+  position: relative;
+  margin: 19px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  align="center";
+  }
+  label::before {
+  background-color: white;
+   border-radius: 400px;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0)
+
+}
+
+label img {
+  height: 235px;
+  width: 315px;
+  border-radius: 400px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked+label {
+  border-color: #ddd;
+   border-radius: 400px;
+  }
+
+:checked+label::before {
+  content: "✓";
+  background-color: grey;
+  border-radius: 400px;
+  transform: scale(1);
+}
+
+:checked+label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+}
+
+#cartTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+#cartTable td, #cartTable th {
+  border: 0px solid ;
+  padding: 2px;
+  text-align: center;
+}
+
+#cartTable th {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+  background-color: #FF6600;
+  color: #F5F5DC;
+}
+
+#cartTable1 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 60%;
+}
+
+#cartTable1 td, #cartTable1 th {
+  border: 1px solid black ;
+  padding-top: 5px;
+  padding-bottom: 10px;
+
+  text-align: center;
+}
+
+#cartTable1 th {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #FF6600;
+  color: #F5F5DC;
+}
+div.scroll {
+    width: 100%;
+    height: 700px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+            }
+.btn {
+  border: none;
+  background-color: orange;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+</style>
+</head>
+<body class="body" style="font-family:Trebuchet MS, Arial, Helvetica, sans-serif;">
+<br>
+<div class="topnav" id="myTopnav">
+<span align="left"  height="100px" ><a href="home.html" height="100px"> &nbsp &nbsp <img  src="Icons\logo.png" width="100" height="60" > </a></span>
+
+	<ul>
+	 <b></b>
+       <a href="home.html" >Home</a>
+       <a href="About us.html">About Us</a>
+	   <a href="contact us.html">Contact Us</a>
+       <a href="Team.html">Team</a>
+	   <a class="active" href="menu.html">Menu</a>
+       <a href="gallery.html">Gallery</a>
+  </ul>
+  <a href="javascript:void(0);" class="icon" onclick="Response()">
+    <i class="fa fa-bars"></i>
+  </a>
+
+</div>
+
+   <br>
+  <p align="right"><h2 style="color:White;cursor:pointer" align="right"><span class="price" style="color:White"><i class="fa fa-shopping-cart" onclick="openForm()"></i> <b id="AddQuaCart">0</b> &nbsp &nbsp &nbsp </span></h2></p>.
+
+
+    <h1 align="center" style="color: #F5F5DC; font-weight: bolder">Our Menu</h1>
+	<center>
+
+     <div class="form-popup" id="Confirmation_Form" style=" border-radius: 20px">
+	 <div class="scroll">
+     <div  class="form-container" style=" height: 80%">
+     <h2 style="color:#000000">Your Order Cart</h2>
+
+    <div class="container" >
+<form action="checkoutproofpage.html">
+
+	  <table id="cartTable">
+	  <h4 align="left" style="display:none"> &nbsp &nbsp &nbsp Order ID: &nbsp <span id="OrderID"></span> </H4>
+	  <h4 align="left">&nbsp &nbsp &nbsp Order Date: &nbsp <b id="DATE"></b> </h4>
+      <h4 align="left">&nbsp &nbsp &nbsp Order Time: &nbsp <b id="TIME"></b> </h4>
+  <tr>
+    <th>PRODUCT</th>
+    <th>PRICE</th>
+    <th>QUANTITY</th>
+	<th>TOTAL</th>
+  </tr>
+      <tr>
+	  <td><a href="#" id="FoodName"></a></td>  <td> <b id="foodprice"></b> </td><td><b id="NumItem"></b></td><td> <b id="TotalPrice"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName1"></a></td>  <td> <b id="foodprice1"></b></td> <td><b id="NumItem1"></b></td><td> <b id="TotalPrice1"></b> </td></p>
+      </tr>
+	   <tr>
+	  <td><a href="#" id="FoodName2"></a></td>  <td> <b id="foodprice2"></b></td><td><b id="NumItem2"></b></td> <td> <b id="TotalPrice2"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName3"></a></td>  <td> <b id="foodprice3"></b></td><td><b id="NumItem3"></b></td> <td> <b id="TotalPrice3"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName4"></a></td> <td> <b id="foodprice4"></b></td><td><b id="NumItem4"></b></td>  <td> <b id="TotalPrice4"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName5"></a></td>  <td> <b id="foodprice5"></b></td> <td><b id="NumItem5"></b></td><td> <b id="TotalPrice5"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName6"></a></td>  <td> <b id="foodprice6"></b></td> <td><b id="NumItem6"></b></td><td> <b id="TotalPrice6"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName7"></a></td>  <td> <b id="foodprice7"></b></td><td><b id="NumItem7"></b></td> <td> <b id="TotalPrice7"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName8"></a></td> <td> <b id="foodprice8"></b></td> <td><b id="NumItem8"></b></td> <td> <b id="TotalPrice8"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName9"></a></td>  <td> <b id="foodprice9"></b></td><td><b id="NumItem9"></b></td> <td> <b id="TotalPrice9"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName10"></a></td> <td> <b id="foodprice10"></b></td>  <td><b id="NumItem10"></b></td><td> <b id="TotalPrice10"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName11"></a></td> <td> <b id="foodprice11"></b></td> <td><b id="NumItem11"></b></td> <td> <b id="TotalPrice11"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName12"></a></td>  <td> <b id="foodprice12"></b></td><td><b id="NumItem12"></b></td> <td> <b id="TotalPrice12"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName13"></a></td>  <td> <b id="foodprice13"></b></td> <td><b id="NumItem13"></b></td><td> <b id="TotalPrice13"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName14"></a></td>  <td> <b id="foodprice14"></b></td> <td><b id="NumItem14"></b></td><td> <b id="TotalPrice14"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName15"></a></td>  <td> <b id="foodprice15"></b></td> <td><b id="NumItem15"></b></td><td> <b id="TotalPrice15"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName16"></a></td>  <td> <b id="foodprice16"></b></td> <td><b id="NumItem16"></b></td><td> <b id="TotalPrice16"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName17"></a></td>  <td> <b id="foodprice17"></b></td><td><b id="NumItem17"></b></td> <td> <b id="TotalPrice17"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName18"></a></td>  <td> <b id="foodprice18"></b></td> <td><b id="NumItem18"></b></td><td> <b id="TotalPrice18"></b> </td></p>
+      </tr>
+	   <tr>
+	  <td><a href="#" id="FoodName19"></a></td>  <td> <b id="foodprice19"></b></td><td><b id="NumItem19"></b></td> <td> <b id="TotalPrice19"></b> </td></p>
+      </tr>
+	   <tr>
+	  <td><a href="#" id="FoodName20"></a></td> <td> <b id="foodprice20"></b></td>  <td><b id="NumItem20"></b></td><td> <b id="TotalPrice20"></b> </td></p>
+      </tr>
+	   <tr>
+	  <td><a href="#" id="FoodName21"></a></td> <td> <b id="foodprice21"></b></td> <td><b id="NumItem21"></b></td> <td> <b id="TotalPrice21"></b> </td></p>
+      </tr>
+	  <tr>
+	  <td><a href="#" id="FoodName22"></a></td>  <td> <b id="foodprice22"></b></td><td><b id="NumItem22"></b></td> <td> <b id="TotalPrice22"></b> </td></p>
+      </tr>
+	  </table>
+	  <BR>
+	  <div align="right">
+	  <table width="40%" border="2px" id="cartTable1">
+	  <tr>
+	  <td colspan="2"><h4><b>&nbsp CART TOTALS</b></h4></td>
+	  </tr>
+	  <tr align="center">
+	  <th width="50%"><b>TOTAL QUANTITY</b></th><td><b id="TotalCartQuantity"> </b></td>
+	  </tr>
+	  <tr align="center">
+	  <th><b>TOTAL PRICE</b></th><td><b id="TotalCartCost"> </b></td>
+	  </tr>
+	  <tr>
+	  <td  colspan="2"> .</td>
+	  </tr>
+
+	  </table>
+	  <br>
+	  <button  onclick="passvalues();" style="background-color:#FF6600;border-bottom-width:0px;border-radius:5px;width:200px; border:0px;color:#F5F5DC;"><h4><b> Proceed Checkout</b></h4></button>
+	  </div>
+      <hr>
+      </form>
+	  <div align="left">
+	  &nbsp &nbsp &nbsp <button onclick="closeForm()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:5px;width:200px; border:0px;color:#F5F5DC;"><h4><b>Continue Ordering</b></h4></button>
+	   </div>
+    </div>
+	 <br><br><br>
+
+	   <br>
+	 <br>
+
+  </div>
+  </div>
+</div>
+
+</center>
+   <br>
+   <div align="center">
+
+   <div align="center" style="background-color:#F5F5DC;width:98%; border-radius:20px;">
+   <br>
+   <ul align="left" style="font-size:140%">
+   <strong>
+   <li>First click the item that you want to order.</li>
+	<li>After Clicking the item input the quantity that you would like to order.</li>
+	<li>Click the Add to order button to add the items to the cart.</li>
+	<li>Click the cart in order to view the cart or go to the checkout page.</li>
+	<li>Click the proceed to checkout button if you are done with ordering.
+	<li>Click the Continue ordering button if you still want to add more item to the cart.</li>
+	<li><strong style="color:Red">Note: </strong>unselected item will <strong style="color:black">NOT</strong> be added in your cart.</li>
+	<p><strong style="color:green">Thank you, Enjoy your ordering</strong></p>
+   </strong>
+   </ul>
+   <br>
+
+<div class="row" align="center">
+  <div class="column" >
+   <h2 align="center" style="color:black" >Beef-Cheese Burger</h2>
+     <p>  <input  type="checkbox" id="ckbAddCheeseBurger" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityCheeseBurger')"/>
+       <label for="ckbAddCheeseBurger"><img src="Food Pictures\cheese_burger.jpg" id="IMGbeefcheeseburger" alt="beef_cheese_burger "  /></label>
+      </p>
+      <p align="center" style="color:black;font-size:16px ;"><b><u>Double Beef Cheese Burger:<br></u><br>
+	  consists of beef patty, cheese, onion <br>rings,omatoes, bun, and <br>crunchy lettuce.<br/>
+<br>Price: R50.00
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityCheeseBurger)
+    {
+	     document.getElementById(IMGbeefcheeseburger).
+         document.getElementById(txtQuantityCheeseBurger).disabled = !bEnable;
+
+    }
+</script><br>
+<br>Quantity:  <input type="number" id="txtQuantityCheeseBurger" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add()"  style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+<br/>
+    <br>
+  </div>
+
+  <div class="column">
+   <h2 align="center" style="color:black" >Chicken Honey Burger</h2>
+<p>
+<input type="checkbox" id="ckbAddCrispyChickenHoneyBurger" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityCrispyChickenBurger')"/>
+    <label for="ckbAddCrispyChickenHoneyBurger"><img src="Food Pictures\crispy_chicken.jpg" alt="Chicken_honey" ></label>
+
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b> <u>Crispy Chicken Burger with Honey</u><br><br>
+Consists of grilled Chicken breasts, <br/>coleslaw, lettuce, honey mustard <br/>sauce and a toasted bun
+<br><br>Price: R40.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityCrispyChickenBurger)
+    {
+         document.getElementById(txtQuantityCrispyChickenBurger).disabled = !bEnable;
+
+    }
+
+</script><br>
+<br>Quantity:  <input type="number"  id="txtQuantityCrispyChickenBurger" style="border-radius: 5px; width: 55px;font-size: large;" value="0" disabled ><br/>
+<br><button onclick="add1()"  style="background-color:#FF6600;border-bottom-width:2px;border-radius:200px;width:200px; border:2px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+  <div class="column">
+     <h2 align="center" style="color:black" >Beef Egg Burger</h2>
+<p>
+<input type="checkbox" id="ckbAddBeefEggsBurger" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityBeefEggsBurger')"/>
+    <label for="ckbAddBeefEggsBurger"><img src="Food Pictures\BeefEggsBurger.jpg" alt="Chicken_honey" ></label>
+
+</p>
+<p align="center" style="font-size:16px;color:black;"><b> <u>Beef and Ham burger:</u><br><br>
+Consist of Roasted beef Ham and one <br/> pouched Egg in a freshly baked bun.
+<br><br/><br/>Price: R40.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityBeefEggsBurger)
+    {
+         document.getElementById(txtQuantityBeefEggsBurger).disabled = !bEnable;
+
+    }
+</script><br>
+<br>Quantity:  <input type="number" id="txtQuantityBeefEggsBurger" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add2()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+
+  <div class="column">
+    <h2 align="center" style="color:black" >Battered Fish</h2>
+<p>
+<input type="checkbox" id="ckbAddbatteredFish" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantitybatteredFish')"/>
+    <label for="ckbAddbatteredFish"><img src="Food Pictures\fishFriedChipsSalad.jpg" alt="BatteredFish" /></label>
+</p>
+<p align="center" style="font-size:16px;color:black;"><b><u>Battered fish with fried chips and salad :</u><br><br>
+Consists of chicken stew, pap <br>and mushrooms
+<br/><br/><br>Price: R60.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantitybatteredFish)
+    {
+         document.getElementById(txtQuantitybatteredFish).disabled = !bEnable;
+
+    }
+</script>
+<br><br/>Quantity: <input type="number" id="txtQuantitybatteredFish" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add3()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p> <br/>
+ <br/>
+ <br/>
+ <br/>
+  </div>
+  <div class="column">
+    <h2 align="center" style="color:black" class="auto-style2">Chicken Nuggets</h2>
+<p>
+<input type="checkbox" id="ckbAddchickenNuggets" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantitychickenNuggets')"/>
+    <label for="ckbAddchickenNuggets"><img src="Food Pictures\chickenNuggets.jpg" alt="Beef_curry" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"> <b><u>Chicken Nuggets With Mustard Sauce:</u><br><br>
+Consists of beef curry and rice
+<br><br/><br/><br>Price: R40.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantitychickenNuggets)
+    {
+         document.getElementById(txtQuantitychickenNuggets).disabled = !bEnable;
+
+    }
+</script><br>
+<br>Quantity:  <input type="number" id="txtQuantitychickenNuggets" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add4()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p>
+<br/>
+  </div>
+  <div class="column">
+     <h2 align="center" style="color:black" >Grilled cheese sandwich </h2>
+<p>
+<input type="checkbox" id="ckbAddgrilledCheeseSandwich" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantitygrilledCheeseSandwich')"/>
+    <label for="ckbAddgrilledCheeseSandwich"><img src="Food Pictures\grilledCheeseSandwich.jpg" alt="Chicken_honey" ></label>
+
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b> <u>Grilled cheese sandwich </u><br><br>
+Consists of grilled Chicken <br>breasts, coleslaw, lettuce, honey <br>mustard sauce and a toasted bun
+<br><br>Price: R35.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantitygrilledCheeseSandwich)
+    {
+         document.getElementById(txtQuantitygrilledCheeseSandwich).disabled = !bEnable;
+
+    }
+</script><br>
+<br>Quantity:  <input type="number" id="txtQuantitygrilledCheeseSandwich" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add5()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+
+  <div class="column">
+   <h2 align="center" style="color:black" >Hot Spicy Wings</h2>
+<p>
+<input type="checkbox" id="ckbAddhotSpicyWings" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityhotSpicyWings')" />
+    <label for="ckbAddhotSpicyWings"><img src="Food Pictures\hotSpicyWings.jpg" alt="Hot_Spicy_Wings" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>Hot Spicy Wings:</u><br><br>
+Consist of chicken wings, chill sauce<br/> and peri-peri
+<br><br/><br>Price: R50.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityhotSpicyWings)
+    {
+         document.getElementById(txtQuantityhotSpicyWings).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br> Quantity: <input type="number" id="txtQuantityhotSpicyWings" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add6()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+  <div class="column">
+    <h2 align="center" style="color:black" class="auto-style2">Beef Curry</h2>
+<p>
+<input type="checkbox" id="ckbAddBeefCurry" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityBeefCurry')" />
+    <label for="ckbAddBeefCurry"><img src="Food Pictures\beef_curry.jpg" alt="Beef_curry" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"> <b><u>Beef Curry with Rice:</u><br><br>
+Consists of beef curry and rice
+<br><br/><br/><br>Price: R30.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityBeefCurry)
+    {
+         document.getElementById(txtQuantityBeefCurry).disabled = !bEnable;
+
+    }
+</script><br>
+<br> Quantity:  <input type="number" id="txtQuantityBeefCurry" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add7()"style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+<br/>
+ <br/>
+<br>
+  </div>
+  <div class="column">
+    <h2 align="center" style="color:black" >Meatball Sub </h2>
+<p>
+<input type="checkbox" id="ckbAddMeatballSub" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityMeatballSub')"/>
+    <label for="ckbAddMeatballSub"><img src="Food Pictures\meatballs.jpg" alt="Chicken_honey" ></label>
+
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b> <u>Meatball Sub:</u><br><br>
+Consists of grilled Chicken <br>breasts, coleslaw, lettuce, honey <br>mustard sauce and a toasted bun
+<br><br>Price: R40.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityMeatballSub)
+    {
+         document.getElementById(txtQuantityMeatballSub).disabled = !bEnable;
+
+    }
+</script><br>
+<br> Quantity:  <input type="number" id="txtQuantityMeatballSub" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"> <br/>
+<br><button onclick="add8()"style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+  <div class="column">
+    <h2 align="center" style="color:black" >Fried Tuna</h2>
+<p>
+<input type="checkbox" id="ckbAddFriedTuna" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityFriedTuna')" />
+    <label for="ckbAddFriedTuna"><img src="Food Pictures\Tuna.jpg" alt="Fried Tuna" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>Fried tuna floating in gravy:</u><br><br>
+Consist of gravy and all the good greens.
+<br><br/><br/><br>Price: R45.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityFriedTuna)
+    {
+         document.getElementById(txtQuantityFriedTuna).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br> Quantity: <input type="number" id="txtQuantityFriedTuna" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add9()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+  <div class="column">
+    <h2 align="center" style="color:black" >Texas Toast</h2>
+<p>
+<input type="checkbox" id="ckbAddTexasToast" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityTexasToast')" />
+    <label for="ckbAddTexasToast"><img src="Food Pictures\Texas_toast.png" alt="Texas Toast" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>Naturally Leavened Sourdough Bread::</u><br><br>
+Consists of sourdough, brown crust, rich, <br/>deep, flavour and mild tang ripe
+<br><br/><br>Price: R10.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityTexasToast)
+    {
+         document.getElementById(txtQuantityTexasToast).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br> Quantity: <input type="number" id="txtQuantityTexasToast" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add10()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+  <div class="column">
+    <h2 align="center" style="color:black" >Cheese Vetkoek</h2>
+<p>
+<input type="checkbox" id="ckbAddCheeseVetkoek" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityCheeseVetkoek')" />
+    <label for="ckbAddCheeseVetkoek"><img src="Food Pictures\Cheese_vetkoek.png" alt="Cheese Vetkoek" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>Cheesy vetkoek with polony:</u><br><br>
+Consist of grated cheese, sliced polony,<br/>and creamy oiled vetkoek
+<br><br/><br>Price: R10.00
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityCheeseVetkoek)
+    {
+         document.getElementById(txtQuantityCheeseVetkoek).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br>Quantity: <input type="number" id="txtQuantityCheeseVetkoek" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add11()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+<br/><br/>
+ <br/>
+ <br/>
+</p>
+  </div><div class="column">
+   <h2 align="center" style="color:black" >Juicy Steak</h2>
+<p>
+<input type="checkbox" id="ckbAddJuicySteak" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityJuicySteak')" />
+    <label for="ckbAddJuicySteak"><img src="Food Pictures\steak.jpg" alt="Juicy Steak" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>Juicy Steak topped with gravy:</u><br><br>
+Consist of fried potato cubes and fried <br/>asparagus on the side.
+<br><br>Price: R60.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityJuicySteak)
+    {
+         document.getElementById(txtQuantityJuicySteak).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br>Quantity: <input type="number" id="txtQuantityJuicySteak" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add12()"style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div><div class="column">
+     <h2 align="center" style="color:black" >Chicken Stew</h2>
+<p>
+<input type="checkbox" id="ckbAddChickenStew" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityChickenStew')" />
+    <label for="ckbAddChickenStew"><img src="Food Pictures\Chicken_stew.jpg" alt="Chicken Stew" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>Chicken stew with pap:</u><br><br>
+Consists of chicken stew, pap and <br/>mushrooms
+<br><br>Price: R35.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityChickenStew)
+    {
+         document.getElementById(txtQuantityChickenStew).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br>Quantity: <input type="number" id="txtQuantityChickenStew" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add13()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+  <div class="column">
+    <h2 align="center" style="color:black" >Boerewors</h2>
+<p>
+<input type="checkbox" id="ckbAddWors" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityWors')" />
+    <label for="ckbAddWors"><img src="Food Pictures\Boerewors.jpg" alt="Boerewors" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>Boerewors:</u><br><br>
+Consists of at least 90% beef meat
+<br><br/><br>Price: R15.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityWors)
+    {
+         document.getElementById(txtQuantityWors).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br>Quantity: <input type="number" id="txtQuantityWors" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add14()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+  <div class="column">
+     <h2 align="center" style="color:black" >Fried Chips</h2>
+<p>
+<input type="checkbox" id="ckbAddFriedChips" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityFriedChips')" />
+    <label for="ckbAddFriedChips"><img src="Food Pictures\french_fries.jpg" alt="Fried Chips" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>French Fried Chips With Sauce:</u><br><br>
+Consists of Frech fries and chill or <br/> tomato sauce or peri-peri
+<br><br>Price: R15.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityFriedChips)
+    {
+         document.getElementById(txtQuantityFriedChips).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br>Quantity: <input type="number" id="txtQuantityFriedChips" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add15()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+ <br/>
+ <br/>
+ <br/>
+</p>
+  </div>
+  <div class="column">
+   <h2 align="center" style="color:black" >BBQ Medium Pizza</h2>
+<p>
+<input type="checkbox" id="ckbAddPizza" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityPizza')" />
+    <label for="ckbAddPizza"><img src="Food Pictures\pizza.jpg" alt="Pizza" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>Milled BBQ Medium Pizza:</u><br><br>
+Consist of meat, mayonnaise, BBQ sauce<br/> and grilled cheese.
+<br><br/><br>Price: R70.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityPizza)
+    {
+         document.getElementById(txtQuantityPizza).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br>Quantity: <input type="number" id="txtQuantityPizza" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add16()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+  <div class="column">
+    <h2 align="center" style="color:black" >Mixed Vegetable Salad</h2>
+<p>
+<input type="checkbox" id="ckbAddSalad" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantitySalad')" />
+    <label for="ckbAddSalad"><img src="Food Pictures\salad.jpg" alt="Salad" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>Plate of salad:</u><br><br>
+Consists of tomatoes,green salad, carrots,<br/> sliced pumpkin and sliced onions
+<br><br/><br>Price: R30.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantitySalad)
+    {
+         document.getElementById(txtQuantitySalad).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br> Quantity: <input type="number" id="txtQuantitySalad" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add17()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+
+  <div class="column">
+  <h2 align="center" style="color:black" > Mixed Avocadoes</h2>
+<p>
+<input type="checkbox" id="ckbAddMixedavocado" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityMixedavocado')" />
+    <label for="ckbAddMixedavocado"><img src="Food Pictures\mixedavocado.jpg" alt="Salad" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>Naturally Mixed Avocadoes:</u><br><br>
+Consists of natural half sliced avocado, <br/>chopped tomatoes, green lettuce <br/>and white cream
+<br><br>Price: R10.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityMixedavocado)
+    {
+         document.getElementById(txtQuantityMixedavocado).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br> Quantity: <input type="number" id="txtQuantityMixedavocado" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add18()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+
+  </div>
+
+
+
+  <div class="column">
+     <h2 align="center" style="color:black" >Mixed Fruit Juice</h2>
+<p>
+<input type="checkbox" id="ckbAddFruitJuice" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityFruitJuice')" />
+    <label for="ckbAddFruitJuice"><img src="Food Pictures\fruit_juice.jpg" alt="Fruit Juice" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>100ml Glass of MIxed Fruit Juice:</u><br><br>
+Consist of red oranges, lemons, apples<br/> and water.
+<br><br/><br>Price: R12.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityFruitJuice)
+    {
+         document.getElementById(txtQuantityFruitJuice).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br> Quantity: <input type="number" id="txtQuantityFruitJuice" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add19()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+<br/>
+<br/>
+ <br/>
+ <br/>
+</p>
+  </div>
+  <div class="column">
+   <h2 align="center" style="color:black" >Orange Juice</h2>
+<p>
+<input type="checkbox" id="ckbAddOrangeJuice" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityOrangeJuice')" />
+    <label for="ckbAddOrangeJuice"><img src="Food Pictures\orange_juice.jpg" alt="Orange Juice" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>750ml Glass of Orange Juice:</u><br><br>
+Consists of oranges, orange juice <br>and water
+<br><br>Price: R11.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityOrangeJuice)
+    {
+         document.getElementById(txtQuantityOrangeJuice).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br> Quantity: <input type="number" id="txtQuantityOrangeJuice" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add20()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+  <div class="column">
+    <h2 align="center" style="color:black" >Lemon Water</h2>
+<p>
+<input type="checkbox" id="ckbAddLemonWater" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityLemonWater')" />
+    <label for="ckbAddLemonWater"><img src="Food Pictures\lemon_water.jpg" alt="Lemon water" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>Glass of Lemon Water:</u><br><br>
+Consists of still water <br>and sliced lemons
+<br>Price: R8.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityLemonWater)
+    {
+         document.getElementById(txtQuantityLemonWater).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br>Quantity: <input type="number" id="txtQuantityLemonWater" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><br><button onclick="add21()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+  <div class="column">
+    <h2 align="center" style="color:black" >Still Water</h2>
+<p>
+<input type="checkbox" id="ckbAddStillWater" style="display:none"; onclick="enableDisable(this.checked, 'txtQuantityStillWater')" />
+    <label for="ckbAddStillWater"><img src="Food Pictures\stillwater.jpg" alt="Still Water" /></label>
+</p>
+<p align="center"  style="font-size:16px;color:black;"><b><u>100ml Still Water:</u><br><br>
+Consist of natural water with <br>no chemicals
+<br><br>Price: R5.00
+
+
+    <script language="javascript">
+
+
+    function enableDisable(bEnable, txtQuantityStillWater)
+    {
+         document.getElementById(txtQuantityStillWater).disabled = !bEnable;
+
+    }
+</script>
+<br>
+<br>Quantity: <input type="number" id="txtQuantityStillWater" style="border-radius: 5px; width: 55px;font-size: large;" disabled   value="0"><br/>
+<br><button onclick="add22()" style="background-color:#FF6600;border-bottom-width:0px;border-radius:200px;width:200px; border:0px;"><h4 style="color:White"><span class="price" style="color:White"><i class="fa fa-shopping-cart"></i> <b>Add To Order</b></span></h4></button><br><br></b></p>
+</p><br/>
+  </div>
+
+</div>
+</div>
+</div>
+
+<br><br>
+
+
+<br> <br><br><br><br>
+<hr style="width:98%;"></hr>
+<footer style="background-color:F5F5DC;bottom:0px;width:100%;height:70px;width:96%;position:relative;left:2%;; border-radius:5px">
+
+
+</footer>
+</body>
+</html>
